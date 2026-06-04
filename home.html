@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My E-Commerce Store</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:20px;
+        }
+
+        .product{
+            background:white;
+            padding:15px;
+            margin:15px 0;
+            border-radius:10px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+<nav style="background:#333;padding:15px;">
+    <a href="/" style="color:white;text-decoration:none;margin-right:20px;">Home</a>
+    <a href="/register/" style="color:white;text-decoration:none;margin-right:20px;">Register</a>
+    <a href="/login/" style="color:white;text-decoration:none;margin-right:20px;">Login</a>
+    <a href="/cart/" style="color:white;text-decoration:none;">Cart</a>
+</nav>
+
+<h1>Products</h1>
+
+{% for product in products %}
+<div class="product">
+    <h2>
+    <a href="/product/{{ product.id }}/">
+        {{ product.name }}
+    </a>
+</h2>
+    <p>Price: ₹{{ product.price }}</p>
+    <p>{{ product.description }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
