@@ -58,4 +58,4 @@ SRAVANI KURMARAYUNI
 
 ## Internship
 
-CodeAlpha Python Programming Internship
+CodeAlpha Full Stack  Programming Internship
